@@ -1,0 +1,69 @@
+<!--Requirement 3 - School Expression of Interest-->
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+    <header> 
+        
+        <!-- <script src="../jquery.js"></script> -->
+        <script src="../jquery.js"></script>
+        <script type="text/javascript" src="../my_funtion.js"></script>
+        
+
+        <script type="text/javascript" >
+        
+        function chooseSchedule(){
+            var schoolName = window.location.href.split('=')[1]
+            window.location.href = './chooseSchedule.html?schoolName='+schoolName
+        }
+         
+         function schoolAddIterest(){
+            var schoolName = window.location.href.split('=')[1]
+            checkInterest(schoolName)
+           
+         }
+        
+        </script>
+    </header>
+
+<style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        ul{
+            list-style-type:none;
+            margin:80px;
+            text-align:center;
+            font-size:14px;
+        }
+        li{
+            display:inline-block;/*改动的地方*/
+            width:100px;
+            padding:10px;
+            background-color:#ff9137;
+        }
+        a:link,a:visited,a:hover,a:active{
+            color:#fff;
+            text-decoration:none;
+        }
+        a{
+            display:block;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <h1>
+            Travelling Technology Bus 
+        </h1>
+    </ul>
+    <ul>
+        <li><a onclick="schoolAddIterest()">Add Interest</a></li>
+        <li><a onclick="chooseSchedule()">Review Schedule</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
+
+   </html>

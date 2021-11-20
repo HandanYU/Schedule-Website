@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <header> 
+
+        <script src="../jquery.js"></script>
+    </header>
+    <script type="text/javascript" src="../my_funtion.js"></script>
+    <script>
+     var schoolName = window.location.href.split('=')[1]
+    chooseSchedule(schoolName)
+
+    function returnback(){
+        var schoolName = window.location.href.split('=')[1]
+        var startDate = document.getElementById('startDate');
+        var endDate = document.getElementById('endDate');
+        submitSchedule(schoolName)
+        
+    }
+    function Cancel()
+        {
+        var schoolName = window.location.href.split('=')[1]
+        checkCancel(schoolName)
+        
+    }
+
+    function back(){
+        var schoolName = window.location.href.split('=')[1]
+        window.location.href='./schoolFrame.html?schoolName='+schoolName
+    }
+    </script>
+    <body>
+        <div style="padding-left: 500px;">
+            <h2>
+                Travelling Technology Bus 
+            </h2>
+            
+            </div>
+            <div style="padding-left: 550px;">
+                <h1>
+                    Your Interest
+                </h1>
+                </div>
+    <div style="padding-left: 450px;">
+<table id='chooseSchedule'>
+</table>
+
+</div>
+<div style="padding-left: 590px;padding-top: 30px;">
+<input type="button" value="submit" onclick="returnback()">
+<input type="button" value="cancel" onclick="Cancel()">
+<input type="button" value="back" onclick="back()">
+</div>
+    </body>
+    </html>
