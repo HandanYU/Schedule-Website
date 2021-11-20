@@ -1,0 +1,76 @@
+<!--Requirement 3 - School Expression of Interest-->
+<!DOCTYPE html>
+<html lang="en">
+    
+
+<body>
+
+        
+    <header> 
+
+        <script src="../jquery.js"></script>
+        <script type="text/javascript" src="../my_funtion.js">
+        </script>
+          <script type="text/javascript" >
+          function submit(){
+            var schoolName = window.location.href.split('=')[1];
+            var cur_name = document.getElementById('schoolName').value;
+            var address = document.getElementById('address').value;
+            var schoolType = document.getElementById('schoolType').value;
+            var message = document.getElementById('message').value;
+            if (schoolName!=cur_name){
+                alert("Please enter the correct school name!")
+            }
+            else{
+                addInterest()
+                sendEmail(schoolName,address,schoolType,message)
+            }
+          }
+        
+        </script>
+    </header>
+
+<div style="padding-left: 500px;">
+    <h2>
+        Travelling Technology Bus 
+    </h2>
+    <h1 style="padding-left: 50px;">
+        Add Interest
+    </h1>
+    <table id="interest">
+        <tr><td>School Name</td>
+        <td><input type="text" id="schoolName"></td></tr>
+        <tr><td>Address</td>
+        <td><input type="text" id="address"></td></tr>
+        <tr><td>City</td>
+        <td><input type="text" id='city'></td></tr>
+        <tr><td>State</td>
+        <td><input type="state" id='state'></td></tr>
+        <tr><td>Postal Code</td>
+        <td><input type="text" id="postalCode"></td></tr>
+        <tr><td>School Type</td>
+            
+        <td><select id="schoolType" onchange="expand()"><option value ="Hosting School">Hosting School</option>
+            <option value ="Visiting School">Visiting School</option></select></td></tr>
+    
+        </table>
+        
+        <div id="hosting">
+        <table id='host'><tr><td>Is Secure Parking Present</td>
+            <td><select id='isSecure'><option value ='Yes'>Yes</option><option value ='No'>No</option></select></td></tr>
+            <tr><td>Total Car Parking Spaces</td><td><input type='number' id='parkSpace'></td></tr>
+            <tr><td>Total Open Areas</td><td><input type='number' id='openArea'></td></tr></table>
+        </div>
+        <div id="visiting"> </div>
+        <table>
+            <tr><td>Message</td>
+            <td><textarea id='message'></textarea>
+                </td></tr>
+        
+        </table>
+    </div>
+    <div style='padding-left: 600px;'>
+        <input type="button" onclick="submit()" value='Submit' >
+    </div>
+</body>
+</html>
