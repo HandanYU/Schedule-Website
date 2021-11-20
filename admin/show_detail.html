@@ -1,0 +1,37 @@
+<html>
+   
+    <script src="../jquery.js"></script>
+    <script src="../jquery.min.js"></script>
+    <script type="text/javascript" src="../my_funtion.js"></script>
+    <script>
+        
+        var index = getUrlParam('index')
+        showDetail(index)
+        function submit(){
+            var index = getUrlParam('index')
+            setSchedule(index)
+        }
+    </script>
+    <body>
+        <div align='center'>
+            <h1>
+                Set Schedule
+            </h1>
+        
+    <table id='tab'>
+        <tr>
+            <td>id</td>
+            <td>schoolName</td>
+            <td>schoolType</td>
+            <td>startDate</td>
+            <td>endDate</td>
+            
+        </tr>
+       
+    </table>
+<div style="padding-top: 10px;">
+    <input type="button" onclick="submit()" value='OK'>
+</div>
+</div>
+</body>
+</html>
